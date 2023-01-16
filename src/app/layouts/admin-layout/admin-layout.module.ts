@@ -8,7 +8,7 @@ import { LbdModule } from '../../lbd/lbd.module';
 import { AdminLayoutRoutes } from './admin-layout.routing';
 
 import { HomeComponent } from '../../home/home.component';
-import { UserComponent } from '../../user/user.component';
+import { PersonelComponent } from '../../personel/personel.component';
 import { TablesComponent } from '../../tables/tables.component';
 import { TypographyComponent } from '../../typography/typography.component';
 import { IconsComponent } from '../../icons/icons.component';
@@ -26,7 +26,7 @@ import { OgrenciComponent } from '../../ogrenci/ogrenci.component';
   ],
   declarations: [
     HomeComponent,
-    UserComponent,
+    PersonelComponent,
     TablesComponent,
     TypographyComponent,
     IconsComponent,
