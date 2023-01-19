@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiserviceService } from 'app/apiservice.service';
 
 @Component({
   selector: 'app-ogrenci',
@@ -7,9 +8,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OgrenciComponent implements OnInit {
 
-  constructor() { }
+  constructor(public api:ApiserviceService) { }
 
   ngOnInit() {
   }
 
+  ogr_kaydet(){
+    
+    const param = {
+      id:1,
+      deneme:"bakbakalım"
+    };
+
+
+
+
+    this.api.post('cities/save', param).then((datas) => {
+      console.log("oldu")
+      console.log(datas)
+    }, error => {
+      console.log("olmadı")
+    }).catch(error => {
+      console.log("nedir")
+    });
+  }
 }
